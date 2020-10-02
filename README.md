@@ -3,11 +3,11 @@ A script that will find weak passwords in an Active Directory domain without cra
 
 This script works by doing a hash comparision. It finds LM passwords by looking for non-nulled hashes. It can find known weak passwords by creating its own list of weak passwords and hashing them and then comparing those to your hashes. You can also upload your own file of weak passwords, one per line, to see if any users have that password. You can append to he included weak_passwords.txt file or call your own file of weak, cleartext (not hashed) passwords
 
-## optional arguments:
-###  -h, --help            show this help message and exit
-###  --hashfile, -f The file containing domain hashes.
-###  --password, -p A single password you want to search for.
-###  --clears, -c A file containing passwords you want to search for.
-###  --common, -m          Looking for SeasonYear and variations of 'Password'
-###  --show_users, -u      Show the usernames with the found passwords
-###  --duplicates, -d      Show accounts with the same password.
+### Optional Arguments:
+####  -h, --help            show this help message and exit
+####  --hashfile, -f The file containing domain hashes.
+####  --password, -p A single password you want to search for.
+####  --clears, -c A file containing passwords you want to search for.
+####  --common, -m          Looking for SeasonYear and variations of 'Password'
+####  --show_users, -u      Show the usernames with the found passwords
+####  --duplicates, -d      Show accounts with the same password.
