@@ -199,7 +199,11 @@ def main():
     # Read suggestions, put pw in a variable, hash it
     # Read through hashfile, compare
     if user_suggestions_file:
-        pprint.pprint(accept_suggestions(user_suggestions_file))
+        res = accept_suggestions(user_suggestions_file)
+        if len(res) == 0:
+            print("None of the passwords in " + user_suggestions_file + " were found.")
+        else:
+            pprint.pprint(res)
 
     if find_duplicates:
         dupes = find_dupes(hashfile)
